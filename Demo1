@@ -1,0 +1,32 @@
+package Demo1;
+
+public class Prog1 {
+    public static void main(String[] args) {
+        pen p1=new pen("white",50); // calling paramieterised constructor
+        p1.company="Xyz"; // Setting value .using .(dot)
+        System.out.println(p1.price);
+        System.out.println(p1.company);
+        System.out.println(p1.weight);
+        pen p2=new pen(); // calling default constructor
+        pen p3=new pen(p1); // calling copy constructor
+
+    }
+}
+class pen {
+    public int price;
+    String company;
+    private String color;
+    protected int weight;
+
+    pen(){} // default constructor
+
+    pen(String color, int p) { // Paraneterised constructor
+        this.color = color; // this keyword
+        price = p;
+    }
+    pen(pen oldpen){ // copy constructor
+        price=oldpen.price;
+        company= oldpen.company;
+        color= oldpen.color;
+    }
+}
