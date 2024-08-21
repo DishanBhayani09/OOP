@@ -1,0 +1,44 @@
+package Demo2;
+
+public class Prog2 {
+    public static void main(String[] args) {
+        Student s1=new Student(178,"abc");
+        s1.setmarks(70,80);
+        s1.setPerc(70.7); // calling setter method
+        // System.out.println(s1.getrNo()); // calling getter method
+        s1.printDetails();
+
+    }
+}
+class Student {
+    private int rNo;
+    private String name;
+    private double perc;
+    private int m1;
+    private int m2;
+
+
+    public int getrNo(){ // getter method
+        return rNo;
+    }
+    public void setmarks(int m1,int m2){ //setter method
+        this.m1=m1;
+        this.m2=m2;
+    }
+
+    public void setPerc(double perc) //setter method
+    {
+        this.perc=perc;
+    }
+
+    Student(int rNo, String name)
+    {
+        this.rNo= rNo;
+        this.name=name;
+    }
+    public void printDetails()
+    {
+        System.out.println(this.rNo+" "+name+" "+perc+" "+m1+" "+m2+" ");
+    }
+
+}
