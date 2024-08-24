@@ -1,0 +1,52 @@
+/*
+Create a class Account with the attributes accountNo, custName,accountBalance and
+methods setAccountDetails() which set the values to these attributes.
+withdraw() which subtracts the given amount from the available balance
+deposit() which adds a given amount to the available balance and
+dispAccountDetails() which displays accountNo, custName,
+accountBalance.
+Create a class Main1 which contains the main() method to test the functionality of
+Account class.
+ */
+package OOPAss1q3;
+
+public class OOPAss1q3 {
+    public static void main(String[] args) {
+        Acccount A1=new Acccount();
+        A1.setAccdetails(64654,"Dishan",44445);
+        A1.Withdraw(445);
+        A1.Deposite(4000);
+        A1.DisplayAccountDetails();
+    }
+}
+
+
+class Acccount{
+    private long Accnum;
+    private String CusName;
+    private double balance;
+
+    public void setAccdetails(long Accnum,String CusName,double balance)
+    {
+        this.Accnum=Accnum;
+        this.CusName=CusName;
+        this.balance=balance;
+    }
+
+    public void Withdraw(int amount)
+    {
+        balance=balance-amount;
+    }
+
+    public void Deposite(int amount)
+    {
+        balance=balance+amount;
+    }
+
+    public void DisplayAccountDetails()
+    {
+        System.out.println("AccNo==="+Accnum);
+        System.out.println("Cusname=="+CusName);
+        System.out.println("Bal=="+balance);
+    }
+}
